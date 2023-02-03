@@ -1,9 +1,9 @@
 <div class="container mt-5">
-    <h1 class="mb-4">Countries</h1>
+    <h1 class="mb-4 text-capitalize">{{title}}</h1>
 
     <div class="d-flex flex-row">
         <!-- main box with data -->
-        <div class="border border-secondary flex-fill me-5 rounded" style="width: 60%">
+        <div class="border border-secondary flex-fill me-5 rounded" style="width: 60%; height: max-content">
             <ul class="list-group">
                 <li class="list-group-item ps-5">country</li>
                 <li class="list-group-item ps-5">country</li>
@@ -16,9 +16,9 @@
         <!-- side bar -->
         <div class="border border-secondary flex-fill flex-sm-fill rounded" style="height: max-content">
             <ul class="list-group">
-                <li class="list-group-item ps-5">country</li>
-                <li class="list-group-item ps-5">country</li>
-                <li class="list-group-item ps-5">country</li>
+                <li class="list-group-item ps-5"><a routerLink="/europe">Europe</a></li>
+                <li class="list-group-item ps-5"><a routerLink="/america">U.S. America</a></li>
+                <li class="list-group-item ps-5"><a routerLink="/asia">Asia</a></li>
 
             </ul>
         </div>
