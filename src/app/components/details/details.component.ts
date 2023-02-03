@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  @Input() title: string = "title";
+  @Input() title: string = "Country";
 
   constructor() { }
 
