@@ -9,15 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailsComponent implements OnInit {
 
   @Input() title: string = "Country";
-  id: number = 0;
 
-  constructor(private route: ActivatedRoute) { }
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      //console.log(params['id']);
-      this.id = params['id']
-    })
   }
 
 }

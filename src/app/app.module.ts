@@ -10,6 +10,9 @@ import { EuropeComponent } from './view/europe/europe.component';
 import { AmericaComponent } from './view/america/america.component';
 import { AsiaComponent } from './view/asia/asia.component';
 import { DetailsComponent } from './components/details/details.component';
+import { EuropeDetailsComponent } from './view/europe-details/europe-details.component';
+import { AmericaDetailsComponent } from './view/america-details/america-details.component';
+import { AsiaDetailsComponent } from './view/asia-details/asia-details.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { DetailsComponent } from './components/details/details.component';
     AmericaComponent,
     AsiaComponent,
     DetailsComponent,
+    EuropeDetailsComponent,
+    AmericaDetailsComponent,
+    AsiaDetailsComponent,
  ],
   imports: [
     BrowserModule,

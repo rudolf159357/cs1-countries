@@ -9,9 +9,9 @@ import { Countries } from '../models/countriesModel';
 })
 export class GetdataService {
 
-  europeUrl: string = environment.testUrl + "api/Countries/europe";
-  americaUrl: string = environment.testUrl + "api/Countries/america";
-  asiaUrl: string = environment.testUrl + "api/Countries/asia";
+  europeUrl: string = environment.testUrl + "api/Countries/europe/";
+  americaUrl: string = environment.testUrl + "api/Countries/america/";
+  asiaUrl: string = environment.testUrl + "api/Countries/asia/";
 
   constructor(private http: HttpClient) { }
 
@@ -25,5 +25,17 @@ export class GetdataService {
 
   getAsiaData(): Observable<Countries[]> {
     return this.http.get<Countries[]>(this.asiaUrl);
+  }
+
+  getEuropeDataById(id:number): Observable<Countries> {
+    return this.http.get<Countries>(this.europeUrl + id);
+  }
+
+  getAmericaDataById(id:number): Observable<Countries> {
+    return this.http.get<Countries>(this.americaUrl + id);
+  }
+
+  getAsiaDataById(id:number): Observable<Countries> {
+    return this.http.get<Countries>(this.asiaUrl + id);
   }
 }
