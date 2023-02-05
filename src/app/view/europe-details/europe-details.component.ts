@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Countries } from 'src/app/models/countriesModel';
 import { GetdataService } from 'src/app/services/getdata.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { GetdataService } from 'src/app/services/getdata.service';
 export class EuropeDetailsComponent implements OnInit {
 
   id: number = 0;
+  singleCountry!: Countries;
 
   constructor(private route: ActivatedRoute,private service: GetdataService) { }
 
@@ -21,7 +23,8 @@ export class EuropeDetailsComponent implements OnInit {
     });
     // fetching data by id
     this.service.getEuropeDataById(this.id).subscribe({next: (res) => {
-      console.log(res);
+      //console.log(res);
+      this.singleCountry = res;
     },
   error: (err) => {
     console.log(err);

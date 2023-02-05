@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Countries } from 'src/app/models/countriesModel';
 
 @Component({
   selector: 'app-details',
@@ -9,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailsComponent implements OnInit {
 
   @Input() title: string = "Country";
+  @Input() countryData!: Countries;
 
 
   constructor() { }

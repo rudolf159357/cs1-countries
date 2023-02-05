@@ -1,5 +1,5 @@
 <div class="container mt-5">
-    <h1 class="mb-4 text-center text-capitalize">{{title}}</h1>
+    <h1 class="mb-4 text-center text-capitalize">{{countryData.name}}</h1>
 
     <div class="d-flex justify-content-center">
         <!-- main box with data -->
@@ -15,12 +15,12 @@
         </div>
         <div class="shadow me-5 rounded" style="width: 30%; height: max-content">
             <ul class="list-group">
-                <li class="list-group-item text-capitalize ps-5">capital city: </li>
-                <li class="list-group-item text-capitalize ps-5">currecy: </li>
-                <li class="list-group-item text-capitalize ps-5">total area: </li>
-                <li class="list-group-item text-capitalize ps-5">Language: </li>
-                <li class="list-group-item text-capitalize ps-5">Population:</li>
-                <li class="list-group-item text-capitalize ps-5">Capital Population:</li>
+                <li class="list-group-item text-capitalize ps-5">{{countryData.capitalCity}} </li>
+                <li class="list-group-item text-capitalize ps-5">{{countryData.currency}} </li>
+                <li class="list-group-item text-capitalize ps-5">{{countryData.totalArea}} </li>
+                <li class="list-group-item text-capitalize ps-5">{{countryData.language}} </li>
+                <li class="list-group-item text-capitalize ps-5">{{countryData.population}}</li>
+                <li class="list-group-item text-capitalize ps-5">{{countryData.cityPopulation}}</li>
             </ul>
         </div>
     </div>
