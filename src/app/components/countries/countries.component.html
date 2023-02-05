@@ -1,24 +1,47 @@
 <div class="container mt-5">
     <h1 class="mb-4 text-capitalize">{{title}}</h1>
 
-    <div class="d-flex flex-row">
+    
         <!-- main box with data -->
-        <div class="border border-secondary flex-fill me-5 rounded" style="width: 60%; height: max-content">
-            <ul class="list-group">
-                <li class="list-group-item ps-5"><a routerLink="/details">Country</a></li>
-            </ul>
-        </div>
+        <div *ngIf="countries.length > 0; else elseBlock">
+            <div class="d-flex flex-row">
+                <!-- main box -->
+                <div class="shadow flex-fill me-5 rounded mb-5" style="width: 60%; height: max-content">
+                    <ul class="list-group" *ngFor="let value of countries">
+                        <li class="list-group-item ps-5"><a routerLink="/details">{{value.name}}</a></li>
+                    </ul>
+                </div>
+                <!-- side bar -->
+                <div class="shadow flex-fill flex-sm-fill rounded" style="height: max-content">
+                    <ul class="list-group">
+                        <li class="list-group-item ps-5"><a routerLink="/europe">Europe</a></li>
+                        <li class="list-group-item ps-5"><a routerLink="/america">U.S. America</a></li>
+                        <li class="list-group-item ps-5"><a routerLink="/asia">Asia</a></li>
 
-        <!-- side bar -->
-        <div class="border border-secondary flex-fill flex-sm-fill rounded" style="height: max-content">
-            <ul class="list-group">
-                <li class="list-group-item ps-5"><a routerLink="/europe">Europe</a></li>
-                <li class="list-group-item ps-5"><a routerLink="/america">U.S. America</a></li>
-                <li class="list-group-item ps-5"><a routerLink="/asia">Asia</a></li>
-
-            </ul>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+        <ng-template #elseBlock>
+            <div class="d-flex flex-row">
+                <!-- main box -->
+                <div class="shadow flex-fill me-5 rounded mb-5" style="width: 60%; height: max-content">
+                    <ul class="list-group">
+                        <li class="list-group-item ps-5"><a routerLink="/details">Countries</a></li>
+                    </ul>
+                </div>
+
+                <!-- side bar -->
+                <div class="shadow flex-fill flex-sm-fill rounded" style="height: max-content">
+                    <ul class="list-group">
+                        <li class="list-group-item ps-5"><a routerLink="/europe">Europe</a></li>
+                        <li class="list-group-item ps-5"><a routerLink="/america">U.S. America</a></li>
+                        <li class="list-group-item ps-5"><a routerLink="/asia">Asia</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </ng-template>
     
     
 </div>
