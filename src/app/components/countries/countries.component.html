@@ -8,7 +8,7 @@
                 <!-- main box -->
                 <div class="shadow flex-fill me-5 rounded mb-5" style="width: 60%; height: max-content">
                     <ul class="list-group" *ngFor="let value of countries">
-                        <li class="list-group-item ps-5"><a routerLink="/details">{{value.name}}</a></li>
+                        <li class="list-group-item ps-5"><a [routerLink]="['details', value.id]">{{value.name}}</a></li>
                     </ul>
                 </div>
                 <!-- side bar -->

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -8,10 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DetailsComponent implements OnInit {
 
   @Input() title: string = "Country";
+  id: number = 0;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      //console.log(params['id']);
+      this.id = params['id']
+    })
   }
 
 }

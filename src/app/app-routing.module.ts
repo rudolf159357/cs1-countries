@@ -13,7 +13,9 @@ const routes: Routes = [
   {path: "europe", component: EuropeComponent},
   {path: "america", component: AmericaComponent},
   {path: "asia", component: AsiaComponent},                                                                                                                             
-  {path: "details", component: DetailsComponent},                                                                                                                             
+  {path: "europe/details/:id", component: DetailsComponent},                                                                                                                             
+  {path: "america/details/:id", component: DetailsComponent},                                                                                                                             
+  {path: "asia/details/:id", component: DetailsComponent},                                                                                                                             
 ];
 
 @NgModule({
