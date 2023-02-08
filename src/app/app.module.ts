@@ -13,6 +13,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { EuropeDetailsComponent } from './view/europe-details/europe-details.component';
 import { AmericaDetailsComponent } from './view/america-details/america-details.component';
 import { AsiaDetailsComponent } from './view/asia-details/asia-details.component';
+import { ComparatorComponent } from './view/comparator/comparator.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { AsiaDetailsComponent } from './view/asia-details/asia-details.component
     EuropeDetailsComponent,
     AmericaDetailsComponent,
     AsiaDetailsComponent,
+    ComparatorComponent,
  ],
   imports: [
     BrowserModule,
