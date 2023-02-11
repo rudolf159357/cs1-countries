@@ -4,22 +4,22 @@
     <div class="d-flex flex-row justify-content-center align-items-center">
         <div class="w-50 p-3 d-flex bg-white shadow mb-5 rounded">
             <div class="form-check me-5">
-                <input class="form-check-input" type="checkbox" value="" id="check1">
-                <label class="form-check-label text-capitalize" for="check1">
+                <input class="form-check-input" type="checkbox" value="" id="area"  [(ngModel)]="checkbox.area">
+                <label class="form-check-label text-capitalize" for="area">
                     total area
                 </label>
               </div>
     
             <div class="form-check  me-5">
-            <input class="form-check-input" type="checkbox" value="" id="check2" >
-            <label class="form-check-label text-capitalize" for="check2">
-                population
-            </label>
+                <input class="form-check-input" type="checkbox" value="" id="population" [(ngModel)]="checkbox.population">
+                <label class="form-check-label text-capitalize" for="population">
+                    population
+                </label>
             </div>
 
             <div class="form-check  me-5">
-                <input class="form-check-input" type="checkbox" value="" id="check2" >
-                <label class="form-check-label text-capitalize" for="check2">
+                <input class="form-check-input" type="checkbox" value="" id="city" [(ngModel)]="checkbox.cityPopulation">
+                <label class="form-check-label text-capitalize" for="city">
                     city population
                 </label>
             </div>
@@ -29,8 +29,8 @@
 
     <!-- buttons -->
     <div class="d-flex justify-content-center">
-        <button class="btn btn-lg btn-outline-dark me-5" >biggest</button>  
-        <button class="btn btn-lg btn-outline-dark">smallest</button>  
+        <button class="btn btn-lg btn-outline-dark me-5" (click)="biggest()">biggest</button>  
+        <button class="btn btn-lg btn-outline-dark" (click)="smallest()">smallest</button>  
     </div>
 
 

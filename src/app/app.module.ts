@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http"
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './view/home/home.component';
@@ -14,6 +16,7 @@ import { EuropeDetailsComponent } from './view/europe-details/europe-details.com
 import { AmericaDetailsComponent } from './view/america-details/america-details.component';
 import { AsiaDetailsComponent } from './view/asia-details/asia-details.component';
 import { ComparatorComponent } from './view/comparator/comparator.component';
+
 
 
 @NgModule({
@@ -34,7 +37,8 @@ import { ComparatorComponent } from './view/comparator/comparator.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
